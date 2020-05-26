@@ -5,15 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VolumeControl"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <StackPanel VerticalAlignment="Top" Margin="75">
+        Title="Volume Changer" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
 
-        <Slider TickFrequency="1" TickPlacement="TopLeft"  Maximum="100" Name="Volume" ValueChanged="Volume_ValueChanged" IsSnapToTickEnabled="True">
+        </Grid.ColumnDefinitions>
 
-        </Slider>
-        <TextBox Name="txtVolumeValue"></TextBox>
-        <Button x:Name="Apply" Content="Apply" />
-    </StackPanel>
-
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" FontSize="20" Text="Change your system volume"/>
+        <DockPanel Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"  VerticalAlignment="Center" Margin="10">
+            <TextBox Text="{Binding ElementName=slValue, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Left" TextAlignment="Center" Width="40" />
+            <Slider Maximum="100" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" Name="slValue" ValueChanged="slValue_ValueChanged" />
+        </DockPanel>
+        <Button Grid.Column="1" Grid.Row="2" x:Name="Apply" Content="Apply" HorizontalAlignment="Right" Width="150px"/>
+        <TextBox Grid.Column="1" Grid.Row="4"  Grid.ColumnSpan="2" Name="txtVolumeValue"></TextBox>
+    </Grid>
 </Window>
+ 

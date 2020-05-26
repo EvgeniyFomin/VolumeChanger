@@ -24,9 +24,9 @@ namespace VolumeControl
         {
             InitializeComponent();
         }
-        private void Volume_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        private void slValue_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            txtVolumeValue.Text = Volume.Value.ToString();
+            txtVolumeValue.Text = slValue.Value.ToString();
         }
     }
 }
