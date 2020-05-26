@@ -1,0 +1,19 @@
+﻿<Window x:Class="VolumeControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VolumeControl"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel VerticalAlignment="Top" Margin="75">
+
+        <Slider TickFrequency="1" TickPlacement="TopLeft"  Maximum="100" Name="Volume" ValueChanged="Volume_ValueChanged" IsSnapToTickEnabled="True">
+
+        </Slider>
+        <TextBox Name="txtVolumeValue"></TextBox>
+        <Button x:Name="Apply" Content="Apply" />
+    </StackPanel>
+
+
+</Window>
