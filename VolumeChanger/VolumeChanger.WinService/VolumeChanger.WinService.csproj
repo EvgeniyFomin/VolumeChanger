@@ -70,5 +70,11 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VolumeChanger.CoreAudio\VolumeChanger.CoreAudio.csproj">
+      <Project>{02F2C94C-12BE-4A7B-B9E9-3834A8EC7488}</Project>
+      <Name>VolumeChanger.CoreAudio</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
