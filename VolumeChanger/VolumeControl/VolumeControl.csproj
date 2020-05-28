@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PipesRx\PipesRx.csproj">
+      <Project>{471a02a2-a1f6-4a54-ae36-276336e46567}</Project>
+      <Name>PipesRx</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
