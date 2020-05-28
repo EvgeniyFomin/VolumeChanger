@@ -28,7 +28,7 @@
             <TextBox Text="{Binding ElementName=slValue, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Left" TextAlignment="Center" Width="40" />
             <Slider Maximum="100" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" Name="slValue" ValueChanged="slValue_ValueChanged" />
         </DockPanel>
-        <Button Grid.Column="1" Grid.Row="2" x:Name="Apply" Content="Apply" HorizontalAlignment="Right" Width="150px"/>
+        <Button Grid.Column="1" Grid.Row="2" x:Name="Apply" Content="Apply" HorizontalAlignment="Right" Width="150px" Click="Apply_Click"/>
         <TextBox Grid.Column="1" Grid.Row="4"  Grid.ColumnSpan="2" Name="txtVolumeValue"></TextBox>
     </Grid>
 </Window>
